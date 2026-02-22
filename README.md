@@ -45,12 +45,12 @@ terraform apply
 
 ### Hetzner Token
 
-**Option 1: terraform.tfvars** (gitignored)
+**Option 1: terraform.tfvars**
 ```hcl
 hcloud_token = "your-token-here"
 ```
 
-**Option 2: Environment variable** (recommended for CI/CD)
+**Option 2: Environment variable**
 ```bash
 export TF_VAR_hcloud_token="your-token-here"
 terraform apply
@@ -62,7 +62,7 @@ terraform apply
 |----------|---------|-------------|
 | `hcloud_token` | - | Hetzner API token (required) |
 | `location` | `nbg1` | Datacenter: `fsn1`, `nbg1`, `hel1` |
-| `server_type` | `cpx22` | Server size (~5 EUR/mo) |
+| `server_type` | `cpx22` | Server type |
 | `server_name` | `gatling-proxy` | Server hostname |
 | `proxy_port` | `8080` | Proxy listen port |
 
@@ -86,10 +86,6 @@ terraform output -raw curl_socks5
 curl --socks5-hostname SERVER_IP:8080 \
      --proxy-user USER:PASS \
      https://api64.ipify.org
-
-# Environment variable (works with curl, wget, etc.)
-export ALL_PROXY="socks5h://USER:PASS@SERVER_IP:8080"
-curl https://api64.ipify.org
 ```
 
 ### Proxychains4
