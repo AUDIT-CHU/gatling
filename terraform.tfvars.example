@@ -1,0 +1,12 @@
+# Gatling - Configuration Example
+# Copy this file to terraform.tfvars and fill in your values
+
+# Hetzner Cloud API token (required)
+# Get it from: https://console.hetzner.cloud/projects/*/security/tokens
+hcloud_token = "your-hetzner-api-token-here"
+
+# Optional: customize these defaults
+# location    = "nbg1"           # fsn1, nbg1, hel1
+# server_type = "cpx22"          # cpx22 (~5 EUR), cpx32 (~9 EUR)
+# server_name = "gatling-proxy"
+# proxy_port  = 8080

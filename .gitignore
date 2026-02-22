@@ -1,0 +1,35 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+.terraform.lock.hcl
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Secrets - NEVER commit these
+terraform.tfvars
+*.auto.tfvars
+secrets.tf
+
+# SSH keys
+ssh/gatling_key
+ssh/gatling_key.pub
+
+# Editor
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.kate-swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+*.log
